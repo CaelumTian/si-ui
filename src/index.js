@@ -3,13 +3,11 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-class Test extends React.Component {
-    render() {
-        return (
-            <div>1d</div>
-        )
-    }
-}
-ReactDOM.render(<Test />, document.getElementById('react'));
+import routes from './router.js';
+import './less/reset.less';
+import './less/base.less';
+
+document.title = "SI-UI组件库";
+ReactDOM.render(routes, document.getElementById("react-container"));
 
 

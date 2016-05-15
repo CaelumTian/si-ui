@@ -1,0 +1,89 @@
+.flex,
+.flex-column,
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+.flex-justify-start {
+  justify-content: flex-start;
+}
+.flex-justify-end {
+  justify-content: flex-end;
+}
+.flex-justify-center {
+  justify-content: center;
+}
+.flex-justify-around {
+  justify-content: space-around;
+}
+.flex-justify-between {
+  justify-content: space-between;
+}
+.flex-align-baseline {
+  align-items: baseline;
+}
+.flex-align-start {
+  align-items: flex-start;
+}
+.flex-align-end {
+  align-items: flex-end;
+}
+.flex-align-center {
+  align-items: center;
+}
+@flex-num: 12;
+// 递归生成栅格
+.build-item(@i) when (@i > 0) {
+  .build-item((@i - 1));
+  // 栅格
+  .flex-item-@{i} {
+    width: percentage(@i / @flex-num);
+  }
+  // 向左偏移
+  .flex-offset-@{i} {
+    margin-left: percentage(@i / @flex-num);
+  }
+  // 排序
+  .flex-order-@{i} {
+    order: @i;
+  }
+}
+.build-item(@flex-num);
+/*响应式部分, 占时没有支持的打算
+@media (max-width: 768px) {
+  .flex-sm {
+    flex-direction: column;
+    [class*=flex-item] {
+      width: 100%;
+    }
+  }
+  .flex-sm-hide {
+    display: none !important;
+  }
+}
+@media (max-width: 922px) {
+  .flex-md {
+    flex-direction: column;
+    [class*=flex-item] {
+      width: 100%;
+    }
+  }
+  .flex-md-hide {
+    display: none !important;
+  }
+}
+@media (max-width: 1200px) {
+  .flex-lg {
+    flex-direction: column;
+    [class*=flex-item] {
+      width: 100%;
+    }
+  }
+  .flex-lg-hide {
+    display: none !important;
+  }
+}
+*/

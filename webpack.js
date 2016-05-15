@@ -8,16 +8,8 @@ var server = new webpackDevServer(webpack(webpackConf), {
     hot: true,
     quiet: false,
     noInfo: false,
-    stats: {
-        colors: true,
-        hash: false,
-        timings: false,
-        assets: true,
-        chunks: true,
-        chunkModules: true,
-        modules: false,
-        children: true
-    }
+    historyApiFallback: true,
+    stats: {colors: true}
 });
 
 server.listen(3000, '127.0.0.1', function () {
