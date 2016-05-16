@@ -13,13 +13,14 @@ class List extends React.Component {
         }
     };
     render() {
-        let {className} = this.props;
+        let {className, title} = this.props;
         let classes = classnames({
             "list-content": true,
             [className]: className
         });
         return (
             <div className={classes}>
+                {title ? <div className="list-content-title">{title}</div> : null}
                 <ul>
                     {this.props.children}
                     {this.state.items.map(item => {
