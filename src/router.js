@@ -5,6 +5,7 @@ import React from 'react';
 import {Router, Route, IndexRoute, Redirect, browserHistory, Link} from 'react-router';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import HomePage from './page/HomePage';
+import LayoutPage from './page/Layout';
 
 class App extends React.Component {
     render() {
@@ -37,7 +38,7 @@ const MainRouter = (
     <Router history={browserHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={HomePage} />
-            <Route path="test" component={Test}/>
+            <Route path="layout" component={LayoutPage}/>
         </Route>
     </Router>
 );

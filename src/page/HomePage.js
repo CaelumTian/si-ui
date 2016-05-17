@@ -12,8 +12,9 @@ class HomePage extends React.Component {
         let items = [
             {
                 id: 0,
-                prev: "测试第二个",
-                next: <Icon className="icon-right"/>
+                prev: "layout布局",
+                next: <Icon className="icon-right"/>,
+                href: "/layout"
             },
             {
                 id: 1,

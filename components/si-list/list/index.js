@@ -24,7 +24,7 @@ class List extends React.Component {
                 <ul>
                     {this.props.children}
                     {this.state.items.map(item => {
-                        return <ListItem key={item["id"]} img={item["img"]} prev={item["prev"]} next={item["next"]}/>
+                        return <ListItem key={item["id"]} img={item["img"]} prev={item["prev"]} next={item["next"]} href={item["href"]}/>
                     })}
                 </ul>
             </div>
