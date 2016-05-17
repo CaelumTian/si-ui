@@ -7,6 +7,9 @@ import {Link} from 'react-router';
 import Icon from '../../components/si-icon';
 
 class HomePage extends React.Component {
+    handleTouchEnd(event) {
+        console.log("1");
+    };
     render() {
         document.title = "SI-UI DEMO";
         let items = [
@@ -31,7 +34,13 @@ class HomePage extends React.Component {
                     </a>
                 </header>
                 <div className="content">
-                    <List items={items} title="示例" />
+                    <List items={items} title="示例">
+                        {items.map(item => {
+                            return (
+                                <ListItem key={item["id"] } prev={item["prev"]} next={item["next"]} href={item["href"]}/>
+                            )
+                        })}
+                    </List>
                 </div>
             </div>
         )

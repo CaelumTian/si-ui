@@ -9,6 +9,13 @@
     position: relative;
     border-top: 1px solid @listSplite;
     border-bottom: 1px solid @listSplite;
+    & > a {
+      display: block;
+      &:active {
+        color: @color-link !important;
+        background-color: #dfdfdf;
+      }
+    }
     .list-item:last-child>.item-inner{
       border-bottom: none;
     }
