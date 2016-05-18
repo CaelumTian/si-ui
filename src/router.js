@@ -6,6 +6,7 @@ import {Router, Route, IndexRoute, Redirect, browserHistory, Link} from 'react-r
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import HomePage from './page/HomePage';
 import LayoutPage from './page/Layout';
+import CardPage from './page/CardPage';
 
 class App extends React.Component {
     render() {
@@ -18,27 +19,12 @@ class App extends React.Component {
         )
     }
 }
-
-class Test extends React.Component {
-    render() {
-        return (
-            <div className="hui-page">
-                <header className="bar bar-nav">
-                    <h1 className="title">SI-UI 2</h1>
-                </header>
-                <div className="content">
-                    <p>这是二极页面</p>
-                    <Link to="/">跳转</Link>
-                </div>
-            </div>
-        )
-    }
-}
 const MainRouter = (
     <Router history={browserHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={HomePage} />
             <Route path="layout" component={LayoutPage}/>
+            <Route path="card" component={CardPage} />
         </Route>
     </Router>
 );

@@ -21,8 +21,9 @@ class HomePage extends React.Component {
             },
             {
                 id: 1,
-                prev: "测试第三个",
-                next: <Icon className="icon-right"/>
+                prev: "卡片(Card)组件",
+                next: <Icon className="icon-right"/>,
+                href: "/card"
             }
         ];
         return (
