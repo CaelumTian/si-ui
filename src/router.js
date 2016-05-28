@@ -7,6 +7,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import HomePage from './page/HomePage';
 import LayoutPage from './page/Layout';
 import CardPage from './page/CardPage';
+import IconPage from './page/IconPage';
 
 class App extends React.Component {
     render() {
@@ -25,6 +26,7 @@ const MainRouter = (
             <IndexRoute component={HomePage} />
             <Route path="layout" component={LayoutPage}/>
             <Route path="card" component={CardPage} />
+            <Route path="icon" component={IconPage}/>
         </Route>
     </Router>
 );

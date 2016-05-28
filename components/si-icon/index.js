@@ -7,13 +7,18 @@ import './index.less';
 
 class Icon extends React.Component {
     render() {
-        let {className} = this.props;
+        let {className, name, size, color} = this.props;
         let classes = classnames({
             "icon": true,
+            [name]: name,
             [className]: className
         });
+        let styles = {
+            "color": color,
+            "fontSize": size
+        };
         return(
-            <i className={classes}></i>
+            <i className={classes} style={styles}></i>
         )
     }
 }
