@@ -10,7 +10,7 @@ class Icon extends React.Component {
         let {className, name, size, color} = this.props;
         let classes = classnames({
             "icon": true,
-            [name]: name,
+            ["icon-" + name]: name,
             [className]: className
         });
         let styles = {

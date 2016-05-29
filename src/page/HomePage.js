@@ -16,19 +16,19 @@ class HomePage extends React.Component {
             {
                 id: 0,
                 prev: "layout布局",
-                next: <Icon name="icon-right"/>,
+                next: <Icon name="right"/>,
                 href: "/layout"
             },
             {
                 id: 1,
                 prev: "卡片(Card)组件",
-                next: <Icon name="icon-right"/>,
+                next: <Icon name="right"/>,
                 href: "/card"
             },
             {
                 id: 2,
                 prev: "ICON图标组件",
-                next: <Icon name="icon-right"/>,
+                next: <Icon name="right"/>,
                 href: "/icon"
             }
         ];
@@ -37,7 +37,7 @@ class HomePage extends React.Component {
                 <header className="bar bar-nav">
                     <h1 className="title">SI-UI</h1>
                     <a href="#" className="button pull-right">
-                        <Icon name="icon-info"/>
+                        <Icon name="info"/>
                     </a>
                 </header>
                 <div className="content">

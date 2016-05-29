@@ -1,0 +1,57 @@
+.si-button {
+  -webkit-user-select: none;
+  background: none;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.25rem;
+  padding: 0 0.6rem;
+  border: 1px solid #0894ec;
+  color: #0894ec;
+  white-space: nowrap;
+  position: relative;
+  text-overflow: ellipsis;
+  display: inline-block;
+  line-height: 1.5rem;
+  .icon {
+    margin-right: 3px;
+  }
+  .icon-loading {
+    animation: icon-spin 2s infinite linear;
+  }
+}
+.buildButtonType(@type, @bgColor, @activeColor, @loadColor) {
+  .button-@{type} {
+    color: #ffffff;
+    background-color: @bgColor;
+    border: none;
+    &:active {
+      background-color: @activeColor;
+    }
+    &.active {
+      background-color: @loadColor;
+    }
+  }
+}
+.buildButtonType(primary, #0894ec, #0a8ddf, #2db7f5);
+.buildButtonType(success, #4cd964, #2ac845, #5DF978);
+.buildButtonType(danger, #f6383a, #f6383a, #FF7879);
+.buildButtonType(warning, #ff6600, #ff6600, #FFA76C)
+.button-round {
+  border-radius: 1.25rem;
+}
+.sl-button {
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+}
+.lg-button {
+  font-size: 0.9rem;
+  line-height: 2.3rem;
+}
+@keyframes icon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
