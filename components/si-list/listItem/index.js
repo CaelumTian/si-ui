@@ -25,22 +25,26 @@ class ListItem extends React.Component {
             [className]: className
         });
         let childsJSX = (
-            <li className={classes}>
-                {this.props.img ? <div className="item"><img src={this.props.img}/></div> : null}
-                <div className="item-inner flex">
-                    <div className="item-prev">{this.props.prev}</div>
-                    <div className="item-back">{this.props.next}</div>
-                </div>
-            </li>
+            <div className="item-inner flex">
+                <div className="item-prev">{this.props.prev}</div>
+                <div className="item-back">{this.props.next}</div>
+            </div>
         );
         if(this.props.href) {
             return (
-                <Link to={`${this.props.href}`}>
-                    {childsJSX}
-                </Link>
+                <li className={classes}>
+                    <Link to={`${this.props.href}`}>
+                        {this.props.img ? <div className="item"><img src={this.props.img}/></div> : null}
+                        {childsJSX}
+                    </Link>
+                </li>
             )
         }
-        return childsJSX;
+        return (
+            <li className={classes}>
+                {childsJSX}
+            </li>
+        );
     }
 
 }

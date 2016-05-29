@@ -46,7 +46,7 @@ class CardPage extends React.Component {
                 <header className="bar bar-nav">
                     <h1 className="title">卡片组件</h1>
                     <Link className="button pull-left" to="/">
-                        <Icon name="icon-left"/>
+                        <Icon name="left"/>
                     </Link>
                 </header>
                 <div className="content">

@@ -29,12 +29,13 @@ class IconPage extends React.Component {
                     </Link>
                 </header>
                 <div className="content content-padd">
-                    <Icon name="icon-right" className="style"/>
-                    <div>
-                        <Button round={true} type="danger">我的天</Button>
-                        <Button size="small" handleTouchEnd={this.handleTouchEnd} loading={this.state.loading} type="primary">我的天大</Button>
-                        <Button size="large" loading={true}>我的天大</Button>
-                    </div>
+                    <Icon name="right" className="icon-style"/>
+                    <Icon name="left" className="icon-style"/>
+                    <Icon name="info" className="icon-style"/>
+                    <Icon name="loading" className="icon-style"/>
+                    <Icon name="mark" className="icon-style"/>
+                    <Icon name="more" className="icon-style"/>
+                    <Icon name="wifi" className="icon-style"/>
                 </div>
             </div>
         )

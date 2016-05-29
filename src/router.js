@@ -8,6 +8,7 @@ import HomePage from './page/HomePage';
 import LayoutPage from './page/Layout';
 import CardPage from './page/CardPage';
 import IconPage from './page/IconPage';
+import ButtonPage from './page/ButtonPage';
 
 class App extends React.Component {
     render() {
@@ -27,6 +28,7 @@ const MainRouter = (
             <Route path="layout" component={LayoutPage}/>
             <Route path="card" component={CardPage} />
             <Route path="icon" component={IconPage}/>
+            <Route path="button" component={ButtonPage}/>
         </Route>
     </Router>
 );
